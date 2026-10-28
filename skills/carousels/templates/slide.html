@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  /* The agent replaces each {{value}} with values from brand/brand-kit.yaml */
+  @font-face { font-family: "Heading"; src: url("{{heading_font_file}}"); }
+  @font-face { font-family: "Body"; src: url("{{body_font_file}}"); }
+  :root {
+    --primary: {{primary}};
+    --secondary: {{secondary}};
+    --accent: {{accent}};
+    --background: {{background}};
+    --text: {{text}};
+  }
+  html, body { margin: 0; }
+  .slide {
+    width: 1080px; height: 1350px; box-sizing: border-box;
+    padding: 96px 88px; display: flex; flex-direction: column; justify-content: center;
+    background: var(--background) center/cover no-repeat;
+    color: var(--text); position: relative;
+  }
+  .slide.hook { background-color: var(--primary); color: var(--background); }
+  h1 { font-family: "Heading"; font-size: 96px; line-height: 1.05; margin: 0 0 32px; }
+  h2 { font-family: "Heading"; font-size: 72px; line-height: 1.1; margin: 0 0 28px; color: var(--primary); }
+  p  { font-family: "Body"; font-size: 40px; line-height: 1.4; margin: 0; }
+  .count { position: absolute; top: 56px; right: 64px; font-family: "Body"; font-size: 28px; opacity: .7; }
+  .swipe { position: absolute; bottom: 64px; right: 64px; font-family: "Body"; font-size: 32px; }
+  .logo { position: absolute; bottom: 64px; left: 50%; transform: translateX(-50%); height: 96px; }
+  .handle { font-family: "Body"; font-size: 36px; margin-top: 24px; color: var(--accent); }
+</style>
+</head>
+<body>
+  <!-- The agent fills in one of these per slide -->
+  <div class="slide {{slide_type}}" style="background-image: {{background_image}}">
+    <div class="count">{{slide_number}}</div>
+    <h1>{{hook_or_cta}}</h1>
+    <h2>{{heading}}</h2>
+    <p>{{body}}</p>
+    <div class="handle">{{handle}}</div>
+    <div class="swipe">{{swipe_cue}}</div>
+    <img class="logo" src="{{logo_file}}">
+  </div>
+</body>
+</html>

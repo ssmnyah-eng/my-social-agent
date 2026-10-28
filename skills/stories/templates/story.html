@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  /* The agent replaces each {{value}} with values from brand/brand-kit.yaml */
+  @font-face { font-family: "Heading"; src: url("{{heading_font_file}}"); }
+  html, body { margin: 0; }
+  .frame {
+    width: 1080px; height: 1920px; box-sizing: border-box;
+    padding: 250px 90px 340px; display: flex; align-items: center; justify-content: center;
+    background: {{primary}} url("{{photo_file}}") center/cover no-repeat; position: relative;
+  }
+  h1 {
+    font-family: "Heading"; font-size: 96px; line-height: 1.1; text-align: center;
+    color: {{text_on_dark}}; margin: 0;
+  }
+  .logo { position: absolute; bottom: 360px; left: 50%; transform: translateX(-50%); height: 90px; }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <h1>{{frame_text}}</h1>
+    <img class="logo" src="{{logo_file}}">
+  </div>
+</body>
+</html>

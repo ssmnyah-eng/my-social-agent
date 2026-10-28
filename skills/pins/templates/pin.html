@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  /* The agent replaces each {{value}} with values from brand/brand-kit.yaml */
+  @font-face { font-family: "Heading"; src: url("{{heading_font_file}}"); }
+  @font-face { font-family: "Body"; src: url("{{body_font_file}}"); }
+  html, body { margin: 0; }
+  .pin {
+    width: 1000px; height: 1500px; box-sizing: border-box; padding: 80px;
+    background: {{background}} url("{{photo_file}}") center/cover no-repeat;
+    display: flex; flex-direction: column; justify-content: flex-start; position: relative;
+  }
+  .box {
+    margin-top: 220px; background: {{primary}}; color: {{text_on_dark}};
+    padding: 48px 56px; border-radius: 12px;
+  }
+  .box h1 { font-family: "Heading"; font-size: 88px; line-height: 1.05; margin: 0; }
+  .site {
+    position: absolute; bottom: 56px; left: 0; right: 0; text-align: center;
+    font-family: "Body"; font-size: 32px; color: {{text_on_dark}};
+  }
+</style>
+</head>
+<body>
+  <div class="pin">
+    <div class="box"><h1>{{pin_text}}</h1></div>
+    <div class="site">{{website}}</div>
+  </div>
+</body>
+</html>

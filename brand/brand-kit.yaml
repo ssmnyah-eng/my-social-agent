@@ -1,0 +1,35 @@
+# Exact brand values the agent's code reads.
+# Replace everything in [brackets].
+
+brand_name: "[BRAND NAME]"
+tagline: "[ONE-LINE TAGLINE]"
+website: "[https://yourwebsite.com]"
+link_in_bio: "[https://link-in-bio-url]"
+
+handles:
+  instagram: "[@handle]"
+  facebook: "[Page Name]"
+  pinterest: "[username]"
+
+colors:
+  primary: "[#000000]"
+  secondary: "[#000000]"
+  accent: "[#000000]"
+  background: "[#FFFFFF]"
+  text: "[#000000]"
+  text_on_dark: "[#FFFFFF]"
+
+fonts:
+  heading:
+    name: "[Font Name]"
+    file: "assets/fonts/[heading-font-file.ttf]"
+  body:
+    name: "[Font Name]"
+    file: "assets/fonts/[body-font-file.ttf]"
+
+logo:
+  main: "assets/[logo.png]"
+  on_dark: "assets/[logo-white.png]"
+  icon: "assets/[logo-icon.png]"
+
+music_folder: "assets/music"

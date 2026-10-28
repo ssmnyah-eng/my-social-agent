@@ -1,0 +1,53 @@
+# Settings for this brand's agent.
+# Replace everything in [brackets]. Never put API keys here — they go in GitHub Secrets.
+
+timezone: "America/New_York"
+
+platforms:
+  instagram:
+    on: true
+    posts_per_week:
+      reel: [3]
+      carousel: [2]
+      story: [3]
+    posting_times: ["[09:00]", "[18:00]"]
+  facebook:
+    on: true
+    share_instagram_posts: true
+    posting_times: ["[12:00]"]
+  pinterest:
+    on: true
+    pins_per_week: [7]
+    posting_times: ["[20:00]"]
+    default_link: "[https://yourwebsite.com]"
+    boards:
+      # pillar name: board ID
+      "[Pillar 1]": "[board id]"
+      "[Pillar 2]": "[board id]"
+      "[Pillar 3]": "[board id]"
+
+video:
+  min_seconds: [7]
+  max_seconds: [30]
+
+carousel:
+  min_slides: [5]
+  max_slides: [10]
+
+engagement:
+  auto_reply_questions: true
+  auto_reply_compliments: true
+  hide_spam: true
+
+media_storage:
+  public_base_url: "[https://your-public-media-url]"
+
+google_drive:
+  folders:
+    research: "[folder id]"
+    ideas: "[folder id]"
+    drafts: "[folder id]"
+    review: "[folder id]"
+    approved: "[folder id]"
+    posted: "[folder id]"
+    reports: "[folder id]"

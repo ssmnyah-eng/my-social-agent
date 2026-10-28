@@ -2,29 +2,43 @@
 
 An AI social media manager that researches, creates, checks, posts, and reports on content automatically. Each job the agent does is taught as a **skill**.
 
+**This repo is a template.** Everything is built and ready except the brand. Copy it once per brand, fill in the brand and config forms, and the agent works for that brand.
+
+## How to make a copy for a new brand
+1. On this repo's GitHub page, click **Use this template → Create a new repository**.
+2. Name it after the brand (for example `brandname-social-agent`) and set it to **Private**.
+3. In the new repo, fill in every `[bracket]` in the `brand/` folder (see `brand/README.md`).
+4. Add the brand's logo, fonts and licensed music to `brand/assets/`.
+5. Fill in every `[bracket]` in `config/settings.yaml`.
+6. Fill in `skills/engagement/templates/replies.md` with the brand's approved answers.
+7. Add the keys listed in `config/secrets.md` to the new repo's GitHub Secrets.
+8. Make the 7 Google Drive folders for the brand and put their IDs in `settings.yaml`.
+
 ## Folders
 
 | Folder | What goes in it |
 |---|---|
-| `skills/` | One folder per skill. Each has a `SKILL.md` (the instructions), `examples/` and `templates/`. |
-| `brand/` | Brand voice, colors, fonts, audience, content pillars, words to use and avoid. |
-| `config/` | Settings: platforms, posting schedule, folder IDs. **No passwords or API keys.** |
-| `agent/` | The code that runs the skills in order. |
+| `brand/` | Blank brand forms: voice, visuals, audience, pillars, words, brand kit, assets |
+| `config/` | Settings and the list of secret names |
+| `skills/` | One folder per skill: `SKILL.md`, `examples/`, `templates/` |
+| `agent/` | The code that runs the skills in order |
 
-## Skills
+## Skills (run in this order)
 
 | Skill | Job |
 |---|---|
-| research | Find trends and topics |
-| scripts | Write video scripts and captions |
-| video | Build short videos |
-| carousels | Build carousel posts |
+| research | Find topics and turn them into post ideas |
+| scripts | Write hooks, scripts, slide text, captions, pin text, alt text |
+| video | Build Reels and video pins |
+| carousels | Build carousel slides |
 | pins | Build Pinterest pins |
-| stories | Build stories |
-| quality-check | Check every post before it goes out |
-| posting | Post to each platform |
-| reporting | Pull results and write reports |
-| engagement | Draft replies to comments and DMs |
+| stories | Build story frames |
+| quality-check | Approve, send back for fixes, or hold each post |
+| posting | Publish approved posts on schedule |
+| reporting | Measure results and write the weekly report |
+| engagement | Reply to comments and messages, hide spam, flag sensitive ones |
+
+How the skills pass work to each other is explained in `skills/README.md`.
 
 ## Every SKILL.md has 7 parts
 1. Job
