@@ -3,6 +3,8 @@
 .env.*
 *.key
 *secret*
+# This file only lists key names, never real keys
+!config/secrets.md
 credentials*.json
 token*.json
 

@@ -40,7 +40,7 @@ Make sure nothing posts unless it is on-brand, correct, safe to use and built to
    2. Music is only from `brand/assets/music/`.
    3. No clips or images taken from other creators, TV, movies or YouTube.
 6. Platform checks.
-   1. Media size is right for the format (Reel and story 1080 × 1920, carousel 1080 × 1350, pin 1000 × 1500).
+   1. Media size is right for the format (Reel and story 1080 × 1920, carousel and static image 1080 × 1350, pin 1000 × 1500).
    2. Video length is inside the range in `settings.yaml`.
    3. Caption, title and description are under platform limits.
    4. Hashtag count matches `voice.md`.
@@ -58,7 +58,7 @@ Make sure nothing posts unless it is on-brand, correct, safe to use and built to
      4. Move the package to **05 Approved**.
    - **Something fails that can be fixed**
      1. Write exactly what to fix in `checks`.
-     2. Send it back to the skill that made that part (scripts, video, carousels, pins or stories).
+     2. Send it back to the skill that made that part (scripts, video, carousels, static-posts, pins or stories).
      3. Run quality-check again after the fix.
      4. Allow 2 fix rounds.
    - **Still failing after 2 fix rounds, or a fact, rights or safety check fails**

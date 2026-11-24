@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  /* The agent replaces each {{value}} with values from brand/brand-kit.yaml and the post package */
+  @font-face { font-family: "Heading"; src: url("{{heading_font_file}}"); }
+  @font-face { font-family: "Body"; src: url("{{body_font_file}}"); }
+  :root {
+    --primary: {{primary}};
+    --accent: {{accent}};
+    --background: {{background}};
+    --text: {{text}};
+    --text-on-dark: {{text_on_dark}};
+  }
+  html, body { margin: 0; }
+  .post {
+    width: 1080px; height: 1350px; box-sizing: border-box;
+    padding: 120px 96px; display: flex; flex-direction: column; justify-content: center;
+    background: var(--background) center/cover no-repeat; color: var(--text); position: relative;
+  }
+  .post.on-photo::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.45); }
+  .post.on-photo { color: var(--text-on-dark); }
+  .post.on-color { background-color: var(--primary); color: var(--text-on-dark); }
+  .post > * { position: relative; }
+  .main { font-family: "Heading"; font-size: 104px; line-height: 1.05; margin: 0 0 36px; }
+  .post.stat .main { font-size: 240px; color: var(--accent); }
+  .post.quote .main::before { content: "\201C"; }
+  .post.quote .main::after { content: "\201D"; }
+  .sub { font-family: "Body"; font-size: 44px; line-height: 1.4; margin: 0; }
+  .small { font-family: "Body"; font-size: 28px; opacity: .75; margin-top: 28px; }
+  .stars { font-size: 48px; color: var(--accent); margin-bottom: 24px; }
+  .logo { position: absolute; bottom: 72px; left: 96px; height: 88px; }
+</style>
+</head>
+<body>
+  <!-- static_type: tip | quote | stat | offer | testimonial; background_class: on-photo | on-color | (blank) -->
+  <div class="post {{static_type}} {{background_class}}" style="background-image: {{background_image}}">
+    <div class="stars">{{stars}}</div>
+    <h1 class="main">{{main_text}}</h1>
+    <p class="sub">{{sub_text}}</p>
+    <p class="small">{{small_text}}</p>
+    <img class="logo" src="{{logo_file}}">
+  </div>
+</body>
+</html>

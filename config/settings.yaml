@@ -3,12 +3,16 @@
 
 timezone: "America/New_York"
 
+# Does the brand approve the calendar and posts before they go live? (true / false)
+approval_required: [true]
+
 platforms:
   instagram:
     on: true
     posts_per_week:
       reel: [3]
       carousel: [2]
+      image: [2]
       story: [3]
     posting_times: ["[09:00]", "[18:00]"]
   facebook:
@@ -26,9 +30,35 @@ platforms:
       "[Pillar 2]": "[board id]"
       "[Pillar 3]": "[board id]"
 
+  # Plug-in slots: turned off until each one is connected (see skills/posting/SKILL.md)
+  tiktok:
+    on: false
+    posts_per_week: [0]
+    posting_times: []
+  youtube:
+    on: false
+    shorts_per_week: [0]
+    posting_times: []
+  linkedin:
+    on: false
+    posts_per_week: [0]
+    posting_times: []
+
+# Optional scheduling app instead of direct posting (for example "buffer" or "ayrshare"). Leave blank to post directly.
+scheduler_app: ""
+
 video:
   min_seconds: [7]
   max_seconds: [30]
+
+# The team's separate video editor (see skills/video/SKILL.md)
+video_editor:
+  inbox_folder: "[Drive folder id the editor reads from]"
+  outbox_folder: "[Drive folder id the editor saves finished videos to]"
+  max_wait_hours: [48]
+
+audience_voice:
+  refresh_every_days: [30]
 
 carousel:
   min_slides: [5]

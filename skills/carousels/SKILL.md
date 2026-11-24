@@ -53,5 +53,7 @@ Put finished carousels that look right in `examples/`. Under each one, write wha
 - [ ] Text is at least 40 pixels from every edge.
 - [ ] No text is cut off.
 - [ ] Slide count matches `settings.yaml`.
+- [ ] Hook on slide 1 is 8 words or fewer and readable on a phone.
+- [ ] One idea per slide.
 - [ ] Last slide has the call to action and logo.
 - [ ] Any photo used is in `credits`.

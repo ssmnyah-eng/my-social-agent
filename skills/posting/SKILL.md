@@ -33,6 +33,9 @@ Publish every approved post at its scheduled time on the right platform, with no
      1. Create one item container per slide image (with `is_carousel_item=true`).
      2. Create a carousel container listing those items, with the caption plus hashtags.
      3. Publish the carousel container.
+   - **Instagram static image**
+     1. Create a media container with the image link, the caption plus hashtags, and the alt text.
+     2. Publish the container.
    - **Instagram story**
      1. Create a media container with `media_type=STORIES` for each frame.
      2. Publish each frame in order.
@@ -42,6 +45,11 @@ Publish every approved post at its scheduled time on the right platform, with no
    - **Pinterest**
      1. Create the pin with the board ID, title, description, link, alt text and image.
      2. For video pins, upload the video first, wait until it is ready, then create the pin.
+   - **TikTok, YouTube, LinkedIn (plug-in slots, off for now)**
+     1. These are turned off in `settings.yaml` until each one is connected.
+     2. To connect one: add its keys from `config/secrets.md`, set `on: true`, and add its posting steps here in the same shape as the platforms above.
+     3. If a scheduling app is used instead (for example Buffer or Ayrshare), set `scheduler_app` in `settings.yaml` and send the post there.
+     4. Until then, skip packages for these platforms and leave them in 05 Approved.
 5. Before posting to Instagram, check the account's publishing limit and stop for the day if it has been reached.
 6. Save the platform's post ID, live link and time to the package's `posted` field.
 7. Set `status: "posted"` and move the package to **06 Posted**.
